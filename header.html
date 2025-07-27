@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MelhorEtec</title>
+    <link rel="stylesheet" href="assets/style/css/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="menu">
+            <nav>
+                <li><a href="#" class="nav-link">Sobre</a></li>
+                <li><a href="#" class="nav-link">Suporte</a></li>
+            </nav>
+        </div>
+
+        <div id="entrar">
+            <li><a href="#" class="nav-link">Login</a></li>
+            <li><a href="#" class="nav-link">Criar Conta</a></li>
+        </div>
+    </header>
+
+    <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const navLinks = document.querySelectorAll('.nav-link');
+                
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        // Remove a classe 'active' de todos os links
+                        navLinks.forEach(l => l.classList.remove('active'));
+                        
+                        // Adiciona a classe 'active' apenas ao link clicado
+                        this.classList.add('active');
+                    });
+                });
+            });
+        </script>    
+</body>
+</html>

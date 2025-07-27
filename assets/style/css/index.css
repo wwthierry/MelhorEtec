@@ -1,0 +1,29 @@
+body{
+    background: linear-gradient(90deg, #ffffff, #ffffff 30%, rgba(255, 255, 255, 0.247) 80%), 
+    url("https://correiodeitapetininga.com.br/wp-content/uploads/2021/10/IMG_1349-scaled.jpg");
+    background-size: cover; /* ou contain, dependendo do efeito desejado */
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+#degrade{
+    margin-top: 0px;
+    width: 100vw;
+    height: 100vh;
+}
+
+main h1{
+    font-family: "Open Sans", sans-serif;
+    font-size: 4rem;
+    margin-top: 10rem;
+    margin-left: 3rem;
+    margin-bottom: 0;
+}
+.destaque{
+    color: #161c3d;
+}
+main p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem;
+    margin-left: 3rem;
+}

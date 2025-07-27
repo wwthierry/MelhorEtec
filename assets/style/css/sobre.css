@@ -1,0 +1,54 @@
+body {
+  background-color: #00020c;
+}
+
+main {
+  padding: 2rem 1.5rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  color: rgb(226, 221, 221);
+  font-size: 2rem;
+  font-weight: 600;
+  margin: auto;
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0px;
+  margin: auto;
+}
+
+.highlight {
+  color: yellow;
+}
+
+p {
+  margin: auto;
+  color: white;
+  font-size: 1rem;
+  
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #161c3dcc;
+  border-radius: 10px;
+}

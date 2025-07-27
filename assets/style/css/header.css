@@ -1,0 +1,80 @@
+body{
+    margin: 1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #161c3de7;
+    color: white;
+    margin-bottom: 0px;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+#entrar {
+    margin-right: 0.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+#entrar li {
+    list-style: none;
+}
+
+#entrar a {
+    text-decoration: none;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    opacity: 0.7;
+    position: relative;
+    transition: opacity 0.2s ease; /* Adiciona transição suave */
+}
+
+
+#menu nav {
+    margin-left: 0.5rem;
+    display: flex;
+    gap: 2rem;
+}
+
+#menu li {
+    list-style: none;
+}
+
+#menu a, #entrar a {
+    text-decoration: none;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    opacity: 0.7;
+    position: relative; /* Adicionado */
+    transition: opacity 0.2s ease;
+}
+
+#menu a:hover, #entrar a:hover{
+    transition: 0.2s;
+    opacity: 1;
+}
+.nav-link.active{
+    opacity: 1 !important;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(209, 195, 0);
+    animation: underline 0.3s ease;
+}
+
+@keyframes underline {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu Interface</title>
+  <link rel="stylesheet" href="assets/style/css/menu.css">
+  <link rel="stylesheet" href="assets/style/css/nav.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <!-- Secondary Navigation -->
+    <div class="secondary-nav-container">
+      <ul class="secondary-nav">
+        <li>
+          <a href="#" class="secondary-nav-link active" data-filter="votados">Mais Votados</a>
+        </li>
+        <li>
+          <a href="#" class="secondary-nav-link" data-filter="concluidos">Quase Concluídos</a>
+        </li>
+        <li>
+          <a href="#" class="secondary-nav-link" data-filter="caros">Mais Caros</a>
+        </li>
+        <li>
+          <a href="#" class="secondary-nav-link" data-filter="recentes">Mais Recentes</a>
+        </li>
+      </ul>
+      <button class="post-btn">
+        <i class="fas fa-paper-plane"></i> Postar
+      </button>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="cards-grid">
+      <!-- Card 1 -->
+      <article class="card"
+        style="background-image: url('https://www.sul21.com.br/wp-content/uploads/2019/02/20190220-sul21_190219_gs_8371-18.jpg')"
+        data-title="PORTA QUEBRADA" data-author="Gabriel Barbosa" data-avatar="G" data-avatar-color="pink"
+        data-description="Porta do banheiro masculino primeiro bloco, estrutura comprometida."
+        data-image="https://storage.googleapis.com/a1aa/image/4c5520b3-5334-47b8-1a16-7e93a9f28b4b.jpg"
+        data-votes="127">
+        <div class="card-header">
+          <div class="user-avatar bg-pink">G</div>
+          <span class="username">Gabriel Barbosa</span>
+        </div>
+        <div class="card-content">
+          <h2>PORTA QUEBRADA</h2>
+          <p>Porta do banheiro masculino primeiro bloco, estrutura comprometida.</p>
+        </div>
+        <div class="card-footer">
+          <button class="comment-btn" aria-label="Comentários">
+            <i class="far fa-comment"></i>
+          </button>
+          <div class="votes">
+            <i class="far fa-star"></i>
+            <span>127</span>
+          </div>
+        </div>
+        <a class="card-arrow" onclick="saveCardData(this.closest('.card'))">
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card"
+        style="background-image: url('https://www.portal27.com.br/wp-content/uploads/2020/02/WhatsApp-Image-2020-02-05-at-14.29.46-1024x576.jpeg.webp')"
+        data-title="CADEIRA QUEBRADA" data-author="Neymar Jr" data-avatar="N" data-avatar-color="cyan"
+        data-description="Cadeira com encosto quebrado na sala 3, no segundo bloco."
+        data-image="https://www.portal27.com.br/wp-content/uploads/2020/02/WhatsApp-Image-2020-02-05-at-14.29.46-1024x576.jpeg.webp"
+        data-votes="103">
+        <div class="card-header">
+          <div class="user-avatar bg-cyan">N</div>
+          <span class="username">Neymar Jr</span>
+        </div>
+        <div class="card-content">
+          <h2>CADEIRA QUEBRADA</h2>
+          <p>Cadeira com encosto quebrado na sala 3, no segundo bloco.</p>
+        </div>
+        <div class="card-footer">
+          <button class="comment-btn" aria-label="Comentários">
+            <i class="far fa-comment"></i>
+          </button>
+          <div class="votes">
+            <i class="far fa-star"></i>
+            <span>103</span>
+          </div>
+        </div>
+        <a class="card-arrow" onclick="saveCardData(this.closest('.card'))">
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card" style="background-image: url('https://www.mogidascruzes.sp.gov.br/public/site/imagens/6/2023051815373664667070b1273.png')"
+        data-title="LÂMPADA QUEIMADA" data-author="Roberto Firmino" data-avatar="R" data-avatar-color="yellow"
+        data-description="Lâmpada do corredor principal queimada há 3 dias."
+        data-image="https://www.mogidascruzes.sp.gov.br/public/site/imagens/6/2023051815373664667070b1273.png" data-votes="89">
+        <div class="card-header">
+          <div class="user-avatar bg-yellow">R</div>
+          <span class="username">Roberto Firmino</span>
+        </div>
+        <div class="card-content">
+          <h2>LÂMPADA QUEIMADA</h2>
+          <p>Lâmpada do corredor principal queimada há 3 dias.</p>
+        </div>
+        <div class="card-footer">
+          <button class="comment-btn" aria-label="Comentários">
+            <i class="far fa-comment"></i>
+          </button>
+          <div class="votes">
+            <i class="far fa-star"></i>
+            <span>89</span>
+          </div>
+        </div>
+        <a class="card-arrow" onclick="saveCardData(this.closest('.card'))">
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card" style="background-image: url('https://www.jornalcruzeiro.com.br/_midias/jpg/2022/09/27/sem_titulo-998678.jpg?20220927132712')"
+        data-title="VAZAMENTO DE ÁGUA" data-author="Alisson Becker" data-avatar="A" data-avatar-color="blue"
+        data-description="Vazamento no bebedouro do segundo andar."
+        data-image="https://www.jornalcruzeiro.com.br/_midias/jpg/2022/09/27/sem_titulo-998678.jpg?20220927132712" data-votes="76">
+        <div class="card-header">
+          <div class="user-avatar bg-blue">A</div>
+          <span class="username">Alisson Becker</span>
+        </div>
+        <div class="card-content">
+          <h2>VAZAMENTO DE ÁGUA</h2>
+          <p>Vazamento no bebedouro do segundo andar.</p>
+        </div>
+        <div class="card-footer">
+          <button class="comment-btn" aria-label="Comentários">
+            <i class="far fa-comment"></i>
+          </button>
+          <div class="votes">
+            <i class="far fa-star"></i>
+            <span>76</span>
+          </div>
+        </div>
+        <a class="card-arrow" onclick="saveCardData(this.closest('.card'))">
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </article>
+    </div>
+  </div>
+
+  <script src="assets/style/js/nav.js"></script>
+  <script src="assets/style/js/filtro.js"></script>
+  <script src="assets/style/js/post.js"></script>
+  <script>
+    document.querySelectorAll('.card-arrow').forEach(arrow => {
+      arrow.addEventListener('click', () => {
+        window.location.href = 'post.html';
+      });
+    });
+
+    document.querySelectorAll('.post-btn').forEach(btn =>{
+      btn.addEventListener('click', () => {
+        window.location.href = 'publi.html';
+      });
+    });
+  </script>
+</body>
+
+</html>

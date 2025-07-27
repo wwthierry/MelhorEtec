@@ -1,0 +1,111 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Broken Door Report</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="assets/style/css/post.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <img
+        src="https://storage.googleapis.com/a1aa/image/4c5520b3-5334-47b8-1a16-7e93a9f28b4b.jpg"
+        alt="Broken bathroom door with wood peeling off and a white toilet visible in the background"
+      />
+      <div class="avatar">
+        <div class="avatar-circle">G</div>
+        <span class="avatar-name">Gabriel Barbosa</span>
+      </div>
+      <div class="text-block">
+        <h2 class="title">PORTA QUEBRADA</h2>
+        <p class="description">
+          Porta do banheiro masculino primeiro bloco, estrutura comprometida.
+        </p>
+      </div>
+      <button aria-label="Previous" class="nav-button nav-left">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button aria-label="Next" class="nav-button nav-right">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+    <div class="right">
+      <div class="comment">
+        <div class="comment-avatar">N</div>
+        <div class="comment-content">
+          <p class="comment-name">Neymar Jr</p>
+          <p class="comment-text">To torcendo para resolverem logo.</p>
+        </div>
+        <div class="comment-likes red">
+          <i class="fas fa-heart"></i>
+          <span>23</span>
+        </div>
+      </div>
+      <div class="comment">
+        <div class="comment-avatar">N</div>
+        <div class="comment-content">
+          <p class="comment-name">Neymar Jr</p>
+          <p class="comment-text">To torcendo para resolverem logo.</p>
+        </div>
+        <div class="comment-likes white">
+          <i class="far fa-heart"></i>
+          <span>23</span>
+        </div>
+      </div>
+      <div class="comment">
+        <div class="comment-avatar">N</div>
+        <div class="comment-content">
+          <p class="comment-name">Neymar Jr</p>
+          <p class="comment-text">To torcendo para resolverem logo.</p>
+        </div>
+        <div class="comment-likes red">
+          <i class="fas fa-heart"></i>
+          <span>23</span>
+        </div>
+      </div>
+      <form>
+        <label for="comment" class="sr-only">Escreva seu comentário</label>
+        <div class="comment-input-wrapper">
+          <input
+            type="text"
+            id="comment"
+            class="comment-input"
+            placeholder="Escreva seu comentário..."
+          />
+          <button type="submit" aria-label="Send comment" class="comment-submit">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Recupera os dados do card selecionado
+    const cardData = JSON.parse(localStorage.getItem('selectedCard')) || {
+      title: 'PORTA QUEBRADA',
+      author: 'Gabriel Barbosa',
+      avatar: 'G',
+      avatarColor: 'pink',
+      description: 'Porta do banheiro masculino primeiro bloco, estrutura comprometida.',
+      image: 'https://storage.googleapis.com/a1aa/image/4c5520b3-5334-47b8-1a16-7e93a9f28b4b.jpg',
+      votes: '127'
+    };
+
+    // Atualiza a página com os dados do card
+    document.querySelector('.left img').src = cardData.image;
+    document.querySelector('.avatar-circle').textContent = cardData.avatar;
+    document.querySelector('.avatar-circle').className = `avatar-circle bg-${cardData.avatarColor}`;
+    document.querySelector('.avatar-name').textContent = cardData.author;
+    document.querySelector('.title').textContent = cardData.title;
+    document.querySelector('.description').textContent = cardData.description;
+    
+    // Atualiza os comentários (opcional)
+    document.querySelectorAll('.comment-name').forEach(el => {
+      el.textContent = cardData.author;
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, black 0%, #00098b 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+}
+
+/* Secondary Navigation */
+.secondary-nav-container {
+  max-width: 800px;
+  margin: 32px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.secondary-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #4b5563;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-grow: 1;
+  max-width: 800px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.secondary-nav-link {
+  display: block;
+  text-align: center;
+  padding: 8px 24px;
+  color: white;
+  text-decoration: none;
+  flex: 1;
+  transition: background-color 0.3s;
+}
+
+.secondary-nav-link:hover {
+  background-color: #374151;
+  border-radius: 4px;
+}
+
+.secondary-nav-link.active {
+  border-bottom: 3px solid #facc15;
+  border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    width: 100%;
+    gap: 32px;
+    margin-bottom: 10rem;
+    overflow-y: hidden;
+}
+
+label.upload {
+    background-color: rgba(128, 128, 128, 0.7);
+    width: 384px;
+    height: 192px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+label.upload img {
+    opacity: 0.5;
+    max-width: 150px;
+    max-height: 120px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+input[type="text"],
+textarea {
+    background-color: rgba(128, 128, 128, 0.7);
+    border: none;
+    border-radius: 6px;
+    color: #ccc;
+    padding: 12px 16px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+.form-right {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.btn-submit-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button.submit {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    form {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    label.upload {
+        width: 100%;
+        height: 160px;
+    }
+}

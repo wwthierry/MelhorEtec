@@ -1,0 +1,136 @@
+body {
+    margin: 1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #161c3de7;
+    color: white;
+    margin-bottom: 0px;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 58vw;
+    height: 5vh;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#entrar {
+    margin-right: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+#entrar ul {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+#entrar li {
+    list-style: none;
+}
+
+#menu nav {
+    margin-left: 0.5rem;
+    display: flex;
+    margin-top: 0.5rem;
+    gap: 2rem;
+}
+
+#menu ul {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    list-style: none;
+}
+
+#menu a, #entrar a {
+    text-decoration: none;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    opacity: 0.7;
+    position: relative;
+    transition: opacity 0.2s ease;
+}
+
+#menu a:hover, #entrar a:hover {
+    transition: 0.2s;
+    opacity: 1;
+}
+
+.nav-link.active {
+    opacity: 1 !important;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(209, 195, 0);
+    animation: underline 0.3s ease;
+}
+
+.notification-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.notification-btn:hover {
+    opacity: 1;
+}
+
+.notification-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff4757;
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #2f3542;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.user-avatar:hover {
+    opacity: 1;
+}
+
+@keyframes underline {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}

@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login Page</title>
+  <link rel="stylesheet" href="assets/style/css/login.css">
+</head>
+<body>
+  <div class="left">
+    <p>
+      Conosco você pode ajudar a escola ser um ambiente
+      <span class="highlight">melhor a todos.</span>
+    </p>
+  </div>
+
+  <div class="right">
+    <div class="tabs">
+      <div id="tab-login" class="tab active">LOGIN</div>
+      <div id="tab-admin" class="tab admin">LOGIN COMO ADM</div>
+    </div>
+    <form>
+      <label for="rm">R.M escolar:</label>
+      <input type="text" id="rm" name="rm" autocomplete="off" />
+      <label for="senha">Senha:</label>
+      <div class="password-wrapper">
+        <input type="password" id="senha" name="senha" autocomplete="off" />
+        <i class="fas fa-eye"></i>
+      </div>
+      <div class="options">
+        <label><input type="checkbox" /> Salvar Login</label>
+        <a href="#">Esqueceu sua senha?</a>
+      </div>
+      <button href="menu.html"type="submit" class="btn-login">Entrar</button>
+      <button href="criar.html" type="button" class="btn-black">Criar conta</button>
+    </form>
+  </div>
+   <script src="assets/style/js/login.js"></script>
+</body>
+</html>

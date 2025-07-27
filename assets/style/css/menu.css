@@ -1,0 +1,209 @@
+/* Base Styles */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #0B0B1A;
+  color: white;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Secondary Navigation */
+.secondary-nav-container {
+  max-width: 800px;
+  margin: 32px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.secondary-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #4b5563;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-grow: 1;
+  max-width: 800px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.secondary-nav-link {
+  display: block;
+  text-align: center;
+  padding: 8px 24px;
+  color: white;
+  text-decoration: none;
+  flex: 1;
+  transition: background-color 0.3s;
+}
+
+.secondary-nav-link:hover {
+  background-color: #374151;
+  border-radius: 4px;
+}
+
+.secondary-nav-link.active {
+  border-bottom: 3px solid #facc15;
+  border-radius: 10px;
+}
+
+.post-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: white;
+  color: black;
+  height: 2.4rem;
+  border-radius: 6px;
+  padding: 8px 24px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.post-btn:hover {
+  background-color: #e5e7eba1;
+}
+
+/* Cards Grid */
+.cards-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.user-avatar.bg-pink {
+  background-color: #f472b6;
+  color: black;
+  font-weight: bold;
+}
+
+.user-avatar.bg-cyan {
+  background-color: #22d3ee;
+  color: black;
+  font-weight: bold;
+}
+
+.username {
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+
+.card-content h2 {
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 4px;
+}
+
+.card-content p {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.625;
+  max-width: 90%;
+}
+
+.card-footer {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.comment-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 0;
+}
+
+.votes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.votes span {
+  font-size: 18px;
+}
+
+.card-arrow {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  color: rgb(0, 0, 0);
+  font-size: 32px;
+  cursor: pointer;
+  user-select: none;
+  
+}
+.card-arrow:hover{
+ color: rgba(0, 0, 0, 0.562);
+ font-size: 100px;
+ transition: 0.4s;
+ margin-left: 100;
+}
+
+.secondary-nav-link {
+  transition: all 0.3s ease;
+}
+
+.secondary-nav-link.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.secondary-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}

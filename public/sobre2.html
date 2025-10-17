@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style/css/sobre2.css">
+    <link rel="stylesheet" href="assets/style/css/nav.css">
+    <link rel="stylesheet" href="assets/style/css/rodape.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+</head>
+
+<body>
+    <main>
+        <img src="assets/img/logo2.png" alt="">
+
+        <div id="sobreEscola">
+            <p id="text"> Esta plataforma colaborativa foi criada para melhorar a estrutura da ETEC Darcy <br> 
+                Pereira de Moraes, ajudando a identificar e resolver problemas como carteiras <br> quebradas, lâmpadas queimadas e infiltrações. Alunos, professores e a comunidade 
+                <br> escolar podem postar fotos de itens danificados, comentar com sugestões, favorizar as <br> 
+                necessidades mais urgentes e contribuir com doações para consertos. O objetivo é <br> 
+                transformar a escola em um ambiente mais seguro, organizado e confortável,<br> 
+                promovendo mudanças por meio da participação consciente de todos.
+            </p>
+
+            <h2>Como funciona?</h2>
+
+            <div id="suporte">
+                <div class="como" id="como1" onclick="abrirModal('Tirar Foto', 'A primeira etapa é simples! Encontrou um problema (carteira quebrada, lâmpada queimada)? Use seu celular ou câmera para tirar uma foto clara do item danificado. Lembre-se de capturar o problema e o local!')">
+                    <i class="fa-solid fa-camera-retro"></i>
+                    <h3>Tire uma foto do seu problema</h3>
+                </div>
+                
+                <div class="como" id="como2" onclick="abrirModal('Compartilhar o Problema', 'Depois de tirar a foto, você irá para a página de envio. Lá, você adicionará a foto, descreverá o problema (o que é e onde está) e enviará para a comunidade da ETEC analisar.')">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <h3>Compartilhe com a escola o problema, <br>
+                    para ajudarmos</h3>
+                </div>
+                
+                <div class="como" id="como3" onclick="abrirModal('Escola Melhor', 'Sua participação é vital! Depois do envio, a comunidade poderá votar na urgência do problema e, se necessário, arrecadar fundos para o conserto. Juntos, fazemos a diferença!')">
+                    <i class="fa-solid fa-house"></i>
+                    <h3>Assim teremos uma escola <br>
+                    melhor e mais unida!</h3>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <div class="modal-overlay" id="tutorialModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="fecharModal()">&times;</button> 
+            
+            <h3 id="modalTitle">Título da Ação</h3>
+            <p id="modalText">Aqui entra a explicação detalhada de o que o usuário deve fazer em cada etapa, com base na caixa clicada.</p>
+        </div>
+    </div>
+    <script type="module" src="assets/style/js/nav.js"></script>
+    <script src="assets/style/js/rodape.js"></script>
+    
+    <script>
+        // Função para abrir o modal
+        function abrirModal(titulo, texto) {
+            const modal = document.getElementById('tutorialModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalText = document.getElementById('modalText');
+
+            modalTitle.textContent = titulo;
+            modalText.textContent = texto;
+            
+            modal.style.display = 'flex';
+        }
+
+        // Função para fechar o modal
+        function fecharModal() {
+            const modal = document.getElementById('tutorialModal');
+            modal.style.display = 'none';
+        }
+
+        // Opcional: Fechar o modal clicando fora dele
+        const modalOverlay = document.getElementById('tutorialModal');
+        modalOverlay.addEventListener('click', (e) => {
+            // Se o clique foi exatamente no overlay (e não no modal-content)
+            if (e.target === modalOverlay) {
+                fecharModal();
+            }
+        });
+    </script>
+        <!-- VLibras Scripts -->
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+
+</body>
+</html>

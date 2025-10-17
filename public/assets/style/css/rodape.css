@@ -1,0 +1,127 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #700505;
+    color: white;
+    padding: 2rem 0;
+    font-family: "Open Sans", sans-serif;
+    margin-top: auto;
+    /* Esta propriedade é a chave para o footer ficar no final! */
+    padding: 0;
+    width: 100%;
+}
+
+.footer-contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.fa {
+    margin-top: 2rem;
+    padding: 10px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid white;
+    /* A linha 'border-color: 3px solid white;' estava errada */
+    border-radius: 100%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    color: white;
+    ;
+}
+
+.fa-instagram {
+    color: white;
+}
+
+.fa-brands {
+    margin-top: 2rem;
+    padding: 10px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    /* Applies white color to all brand icons */
+}
+
+.fa-brands:hover {
+    opacity: 0.7;
+}
+
+hr {
+    width: 95%;
+    border: 0.2px solid #ffffff3f;
+    margin: 1rem 0;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-section1 {
+    margin-left: 5rem;
+}
+
+#logo{
+    /* Mude a largura para um valor adequado */
+    width: 200px; 
+    height: 40px;
+    /* Mantenha o margin-top */
+    margin-top: 3.5rem;
+}
+
+
+.footer-section1 ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.footer-section1 ul li {
+    list-style: none;
+    margin-bottom: 0.5rem;
+
+}
+
+.footer-section1 ul li:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.footer-section1 ul li a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 20px;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte</title>
+    <link rel="stylesheet" href="assets/style/css/suporte2.css">
+    <link rel="stylesheet" href="assets/style/css/nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/style/css/rodape.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <main>
+        <div id="maincontent">
+            <h1>Como podemos te ajudar hoje?</h1>
+        </div>
+        <div id="topico">
+            <h2>Topicos Populares</h2>
+
+            <div id="contain">
+                <div class="help-op" onclick="abrirModal('Problemas com a Conta', 'Abaixo estão os erros de login mais comuns e o que fazer para resolvê-los:')">
+                    <h3>Conta</h3>
+                    <p>Problemas com o login, senha ou cadastro?</p>
+                </div>
+
+                <div class="help-op">
+                    <h3> <a href="https://forms.gle/NVKdMg6xaY1Taygm6">FeedBack</a></h3>
+                    <p><a href="https://forms.gle/NVKdMg6xaY1Taygm6">Avalie nosso site!</a></p>
+                </div>
+
+                <div class="help-op" onclick="abrirModal('Doações e o Projeto', 'As doações são um pilar fundamental da nossa plataforma. O valor arrecadado é **totalmente revertido** para a compra de materiais necessários (como novas carteiras, lâmpadas ou materiais de construção) para consertar os problemas postados e aprovados na ETEC Darcy Pereira de Moraes. Sua contribuição faz a diferença direta na melhoria da infraestrutura escolar!')">
+                    <h3>Doações</h3>
+                    <p>Como funcionas as doações?</p>
+                </div>
+            </div>
+        </div>
+        <div id="topico2">
+            <div id="other-help-section">
+                <h1>Procurando por outra ajuda?</h1>
+                <div class="help-op2">
+                    <h3>Fale conosco!</h3>
+                    <p>Entre em contato com nosso suporte para mais informações.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal-overlay" id="helpModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="fecharModal()">&times;</button>
+            <h3 id="modalTitle"></h3>
+            <p id="modalText"></p>
+            <div id="modalExtraContent"></div> 
+        </div>
+    </div>
+    <script type="module" src="assets/style/js/nav.js"></script>
+    <script src="assets/style/js/rodape.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // ===================================
+            // LÓGICA 1: DROPDOWN DE NAVEGAÇÃO
+            // ===================================
+            const userIcon = document.querySelector('.fa-circle-user');
+            const dropdown = document.querySelector('.dropdown');
+
+            // 1. Abre/Fecha o dropdown ao clicar no ícone
+            userIcon.addEventListener('click', function(event) {
+                dropdown.classList.toggle('show');
+                event.stopPropagation(); 
+            });
+
+            // 2. Fecha o dropdown ao clicar em qualquer lugar da tela
+            document.addEventListener('click', function() {
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            });
+            
+            // 3. Impede que o clique dentro do dropdown o feche
+            dropdown.addEventListener('click', function(event) {
+                event.stopPropagation();
+            });
+            
+            // ===================================
+            // LÓGICA 2: MODAIS DE SUPORTE
+            // ===================================
+            
+            const modal = document.getElementById('helpModal');
+            const modalOverlay = document.getElementById('helpModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalText = document.getElementById('modalText');
+            const modalExtra = document.getElementById('modalExtraContent');
+
+            // Funções são globais (não precisam de "const") para serem chamadas pelo onclick
+            window.abrirModal = function(titulo, textoPrincipal) {
+                modalTitle.textContent = titulo;
+                modalText.innerHTML = textoPrincipal;
+                modalExtra.innerHTML = ''; // Limpa o conteúdo extra
+                
+                // Conteúdo específico para a caixa "Conta"
+                if (titulo === 'Problemas com a Conta') {
+                    modalExtra.innerHTML = `
+                        <ul class="error-list">
+                            <li><b>Senha Inválida/Esquecida:</b> Clique em "Esqueci minha senha" na tela de login para receber um link de redefinição por e-mail.</li>
+                            <li><b>Usuário Inexistente:</b> Verifique se digitou seu e-mail corretamente ou se o seu cadastro foi finalizado.</li>
+                            <li><b>Conta Bloqueada:</b> Após muitas tentativas incorretas, sua conta pode ser temporariamente bloqueada por segurança. Tente novamente em 15 minutos.</li>
+                        </ul>
+                    `;
+                }
+
+                modal.style.display = 'flex';
+            }
+
+            window.fecharModal = function() {
+                modal.style.display = 'none';
+            }
+
+            // Fechar o modal clicando no overlay
+            modalOverlay.addEventListener('click', (e) => {
+                if (e.target === modalOverlay) {
+                    fecharModal();
+                }
+            });
+        });
+    </script>
+
+    <!-- VLibras Scripts -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+</html>

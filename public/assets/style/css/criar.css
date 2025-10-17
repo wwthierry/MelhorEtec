@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  display: flex;
+  min-height: 100vh;
+  background-color: white;
+}
+
+/* Main container layout */
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Left and Right section styles */
+.left-section,
+.right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+
+/* Left section specific styles (matching login page) */
+.left-section {
+  background: #700505;
+  color: white;
+  text-align: center;
+  width: 30vw;
+}
+
+.left-section h2 {
+  font-weight: 800;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.left-section p {
+  margin-bottom: 24px;
+  font-size: 18px;
+  color: white;
+}
+
+/* Button to go to login page (inverted colors for contrast) */
+.btn-login {
+  background-color: white;
+  color: #700505;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 8px 32px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #f0f0f0;
+}
+
+/* Right section specific styles */
+.right-section {
+  background-color: white;
+  color: black;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-section h2 {
+  font-weight: 800;
+  font-size: 30px;
+  margin-bottom: 24px;
+  color: #700505;
+}
+
+/* Form and input styles */
+form {
+  width: 30rem;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  /* Changed to 100% for responsiveness */
+  height: 2.7rem;
+  padding: 6px 32px 6px 12px;
+  font-size: 15px;
+  border-radius: 0.2rem;
+  border: none;
+  outline: none;
+  background-color: #f0f0f0;
+}
+
+.input-group i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+/* Submit button styles */
+.btn-submit {
+  background-color: #700505;
+  color: white;
+  border: none;
+  border-radius: 0.2rem;
+  width: 100%;
+  padding: 8px 0;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #700505;
+}
+
+/* Link and text styles */
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  margin-top: 1rem;
+  color: rgb(0, 0, 0);
+}
+
+.links a {
+  color: #700505;
+  text-decoration: underline;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.messageDiv {
+  background-color: hsl(327, 90%, 28%);
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-size: 1rem;
+  opacity: 0;
+  animation: fadeOut 7s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+
+  body,
+  html {
+    flex-direction: column;
+  }
+
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  form {
+    max-width: 100%;
+  }
+}

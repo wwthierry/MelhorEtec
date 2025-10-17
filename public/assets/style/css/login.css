@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: white;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+.left-section, .right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+}
+.left-section {
+    background: #700505;
+    color: white;
+    text-align: center;
+    width: 30vw;
+}
+.left-section h2 {
+    font-weight: 800;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+.left-section p {
+    margin-bottom: 24px;
+    font-size: 18px;
+    color: white;
+}
+.btn-login {
+    background-color: #700505;
+    color: black;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 8px 32px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+.btn-login:hover {
+    background-color: #70050577;
+}
+.right-section {
+    background-color: white;
+    color: white;
+    width: 70vw; /* Remova ou altere isso para algo mais flexível */
+    /* Adicione estas propriedades para centralizar o conteúdo */
+    display: flex;
+    flex-direction: column; /* Manter a direção da coluna para empilhar os elementos */
+    justify-content: center; /* Centraliza verticalmente (no eixo principal) */
+    align-items: center; /* Centraliza horizontalmente (no eixo cruzado) */
+}
+.right-section h2 {
+    font-weight: 800;
+    font-size: 30px;
+    margin-bottom: 24px;
+    color: #700505
+}
+form {
+    width: 30rem;
+}
+.input-group {
+    position: relative;
+    margin-bottom: 12px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 30rem;
+    height: 2.7rem;
+    padding: 6px 32px 6px 12px;
+    font-size: 15px;
+    border-radius: 0.2rem;
+    border: none;
+    outline: none;
+    background-color: #f0f0f0;
+}
+.input-group i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 12px;
+    pointer-events: none;
+}
+.btn-submit {
+    background-color: #700505;
+    color: white;
+    border: none;
+    border-radius: 0.2rem;
+    width: 100%;
+    padding: 8px 0;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background-color 0.3s ease;
+}
+.btn-submit:hover {
+    background-color: #700505;
+}
+.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    color: rgb(0, 0, 0);
+}
+.links a {
+    color: #700505;
+    text-decoration: underline;
+    font-size: 16px;
+}
+.messageDiv {
+    background-color: hsl(327,90%,28%);
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 1rem;
+    opacity: 0;
+    animation: fadeOut 7s forwards;
+}
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+@media (max-width: 768px) {
+    body, html {
+        flex-direction: column;
+    }
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+    .left-section, .right-section {
+        width: 100%;
+        padding: 20px;
+    }
+    form {
+        max-width: 100%;
+    }
+}
+/* --- ESTILOS PARA ABAS DE LOGIN/ADMIN --- */
+.right-section h2 {
+    /* Remove o h2 antigo, agora o título é via toggle-tabs */
+    display: none; 
+}
+
+.toggle-tabs {
+    display: flex;
+    justify-content: flex-start; /* Alinhar à esquerda */
+    width: 100%; /* Ocupa a largura total do formulário */
+    position: relative;
+    margin-bottom: 25px; /* Espaço após as abas */
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 0 10px 10px 0; /* Padding inferior para o sublinhado */
+    margin-right: 20px;
+    font-size: 24px;
+    font-weight: 800;
+    cursor: pointer;
+    color: #700505;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.tab-button.active {
+    opacity: 1; /* A aba ativa fica com cor sólida */
+}
+
+.underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background-color: #700505;
+    width: 65px; /* Largura inicial do "LOGIN" */
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+/* Opcional: Estilizar os inputs para ficarem mais parecidos com as imagens */
+.input-group input {
+    font-size: 18px; /* Texto maior nos inputs */
+    font-weight: 600;
+}
+
+/* Garante que o input-group tenha o tamanho do formulário */
+
+.input-group {
+    width: 100%;
+}
+/* Adicionado ao assets/style/css/login.css */
+
+.tab-switcher {
+    display: flex;
+    position: relative;
+    margin-bottom: 24px;
+    width: 30rem; /* Deve ter a mesma largura do formulário */
+    justify-content: flex-start; /* Alinha as abas à esquerda */
+    cursor: pointer;
+}
+
+.tab {
+    padding: 0 10px 5px 0; /* Padding inferior para o underline */
+    font-weight: 800;
+    font-size: 1.2em;
+    color: #888;
+    transition: color 0.3s ease;
+    margin-right: 20px; /* Espaçamento entre as abas */
+    user-select: none;
+}
+
+.tab.active {
+    color: #700505; /* Cor ativa */
+}
+
+.tab-underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: #700505;
+    transition: transform 0.3s ease, width 0.3s ease;
+}
+
+/* Garante que o input agora use type="text" e se adapte à largura */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* Ajusta para 100% da largura do formulário (30rem) */
+    /* ... (resto do seu estilo input) ... */
+}

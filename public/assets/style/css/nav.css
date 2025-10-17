@@ -1,0 +1,332 @@
+/* nav.css */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+  }
+  header {
+    position: fixed;
+    top: 15px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    z-index: 1000;
+    background-color: rgb(128, 1, 1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    padding: 0.2rem 1rem;
+    margin-top: 0px;
+    border-radius: 20px;
+  }
+  #menu {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu nav {
+    text-align: center;
+    display: flex;
+    gap: 2rem;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+  }
+  #menu ul {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 0;
+  }
+  #menu li {
+    list-style: none;
+  }
+  #menu a,
+  #entrar a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: "Open Sans", sans-serif;
+    opacity: 0.7;
+    position: relative;
+    transition: opacity 0.2s ease;
+    font-size: 20px;
+  }
+  nav {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* -------------------------------------- */
+  /* 1. Estilização do Widget de Perfil (Botão que Abre o Dropdown) */
+  /* -------------------------------------- */
+  .user-profile-widget {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    position: relative;
+    margin-top: 5px;
+    padding: 5px 10px;
+    border-radius: 20px;
+  } 
+  .fa-circle-user {
+    font-size: 30px;
+  }
+  .profile-avatar-nav {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+  }
+  .initial-avatar {
+    background-color: #ff9900; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  /* FIM ESTILOS AVATAR NA NAV BAR */
+  
+  /* Hover links da nav principal */
+  #menu a:hover,
+  #entrar a:hover {
+    transition: 0.2s;
+    opacity: 1;
+  }
+  .nav-link.active {
+    opacity: 1 !important;
+  }
+  .nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background-color: rgb(155, 3, 3);
+    animation: underline 0.3s ease;
+  }
+  @keyframes underline {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* -------------------------------------- */
+  /* 2. Dropdown (CUSTOMIZADO) */
+  /* -------------------------------------- */
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100%);
+    right: 0;
+    left: auto;
+    margin-top: 20px;
+    background: white; 
+    border-radius: 24px; 
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    z-index: 1000;
+    min-width: 250px; 
+    max-width: 350px;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    color: #3c4043;
+  }
+  
+  .dropdown.active {
+    display: block;
+  }
+  
+  /* Botão de Fechar (o X no canto superior direito) */
+  .dropdown-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #5f6368;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.1s;
+  }
+  
+  .dropdown-close-btn:hover {
+    background-color: #f1f3f4;
+  }
+  
+  /* -------------------- */
+  /* 2.1 Cabeçalho do Dropdown (Foto, Olá, E-mail) */
+  /* -------------------- */
+  .dropdown-profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 24px 15px 24px; 
+    margin: 0;
+    padding-top: 30px; 
+  }
+  
+  /* Estilo para o e-mail (AGORA ABAIXO DO NOME) */
+  .dropdown-email {
+    margin: 5px 0 0 0; 
+    font-size: 0.85em;
+    color: #5f6368;
+  }
+  
+  /* Foto de Perfil no Dropdown (Maior) */
+  .profile-avatar-dropdown {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 8px;
+    background-color: #ff9900; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    font-weight: 400;
+    position: relative;
+  }
+  
+  /* Ícone de câmera REMOVIDO pelo código JS */
+  .profile-avatar-dropdown::after {
+    content: none;
+  }
+  
+  .welcome-message {
+    margin: 0 0 0 0; 
+    font-size: 1.1em;
+    color: #3c4043;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .welcome-message strong {
+    color: #3c4043;
+    font-weight: 500;
+  }
+  
+  /* -------------------- */
+  /* 2.2 Ações (Configurações e Sair) - AGORA SÃO BOTÕES */
+  /* -------------------- */
+  .dropdown-actions-container {
+    display: flex;
+    justify-content: center;
+    gap: 2px; /* Espaçamento entre os botões */
+    padding: 10px 10px; 
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .dropdown-button {
+      /* Reset de botão padrão */
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      cursor: pointer;
+      /* Estilo visual */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: rgb(236, 236, 236);
+      background-color: #ffffff;
+      padding: 15px 12px;
+      transition: background-color 0.1s, box-shadow 0.1s;
+      width: 500px; /* Limite de largura para botões lado a lado */
+  }
+  
+  .dropdown-button i {
+    font-size: 16px;
+    color: rgb(236, 236, 236);
+  }
+  
+  /* Estilo específico para Sair da Conta (ajusta o ícone de seta) */
+  .signout-button i {
+    transform: scaleX(-1);
+    border-bottom-left-radius: 20px;
+  }
+  .signout-button {
+    background-color: rgba(74, 85, 92, 0.527);
+    border: 2px ;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  #configButton{
+    background-color: rgba(74, 85, 92, 0.527);
+    border: 2px transparent;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  #configButton:hover, .signout-button:hover {
+    background-color: rgba(74, 85, 92, 0.822);
+    color: rgb(236, 236, 236);
+    transition: 0.3s;
+
+  }
+
+  
+  /* -------------------- */
+  /* 2.3 Rodapé com links de política */
+  /* -------------------- */
+  .dropdown-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 20px;
+    font-size: 12px;
+    color: #5f6368;
+    border-top: 1px solid #f1f3f4;
+    margin-top: 10px; 
+  }
+  
+  .dropdown-footer a {
+    text-decoration: none;
+    color: #5f6368;
+    transition: color 0.1s;
+    opacity: 1;
+  }
+  
+  .dropdown-footer a:hover {
+    color: #3c4043;
+    text-decoration: underline;
+  }
+  
+  #loggedUserFName {
+    font-size: 1.2rem;
+    margin-left: 5px;
+  }
+  /* FIM DOS ESTILOS EXCLUSIVOS DO DROPDOWN */

@@ -1,0 +1,116 @@
+html {
+     scroll-behavior: smooth;
+    }
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 10px;
+  }
+
+#main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:85vh;
+}
+
+#escola{
+    width: 55vw;
+    height: auto;
+    float: right;
+    margin-top: 10.50rem;
+}
+
+#text-main{
+    color: #700505;
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem;
+    margin-left: 2em;
+}
+#text-sub{
+    color: #700505;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    margin-left: 2.5em;
+    margin-top: -0.5em;
+}
+
+#sobre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #700505;
+    height: 60vh;
+    
+}
+
+#title{
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#desc{
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+#icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    gap: 2em;
+}
+.icon{
+    width: 4vw;
+    height: auto;
+}
+
+#icon1:hover, #icon2:hover, #icon3:hover {
+    width: 4.2vw;
+    height: auto;
+    transition: 0.2s;
+    opacity: 0.6;
+    }
+
+#loc{
+    display: flex;
+    height: 60vh;
+}
+
+#map{
+    margin-left: 10rem;
+    margin-top: 4em;
+    margin-bottom: 2em;
+    width: 50vw;
+    height: 50vh;
+    border: none;
+    border-radius: 10px;
+}
+
+#info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 3em;
+    margin-bottom: 2em;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+}

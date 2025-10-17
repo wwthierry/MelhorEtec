@@ -1,0 +1,228 @@
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+main {
+  height: 40vh;
+  flex: 1; 
+}
+a{
+  text-decoration: none;
+  color: #700505;
+}
+main h2{
+  margin-bottom: -3rem;
+  margin-left: 5rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  color: #700505;
+}
+
+
+#maincontent{
+  margin-top: 2rem;
+  background-image: url("../../img/Maskgroup4.png");
+  background-repeat: no-repeat;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#maincontent h1{
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 3rem;
+  
+}
+#topico{
+  height: 30vh;
+}
+#topico2{
+  height: 20vh;
+  position: bottom;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+  padding: 5rem;
+  gap: 2rem;
+  font-family: "Open Sans", sans-serif;
+  color: #700505;
+
+}
+#contain{
+  height: 70vh;
+  position: bottom;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+  padding: 5rem;
+  gap: 2rem;
+}
+.help-op{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  border: solid 1px #700505;
+  background-color: rgb(255, 255, 255);
+  width: 40vh;
+  height: 10vh;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 8px;
+}
+.help-op h3{
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  color: #700505;
+}
+
+.help-op:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+
+.help-op2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  border: solid 1px #700505;
+  background-color: rgb(255, 255, 255);
+  width: 140vh;
+  height: 10vh;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 8px;
+}
+.help-op2 h3{
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  color: #700505;
+}
+
+.help-op2:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* Estilo do Ícone de Usuário na NAV (necessário para posicionamento) */
+nav .fa-circle-user {
+    font-size: 30px; 
+    color: #333; 
+    cursor: pointer; 
+    margin-left: 20px;
+    z-index: 20; 
+}
+
+/* Container do Dropdown (menu Config/Conta) */
+.dropdown {
+    position: absolute;
+    /* Posição correta na barra de navegação */
+    top: 100%; 
+    right: 0;
+    
+    /* --- Aparência Inicial (Escondido) --- */
+    display: none; 
+    
+    /* --- Estilo --- */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    border-radius: 4px;
+    padding: 10px 0;
+    z-index: 10;
+}
+
+/* Classe que o JS usa para MOSTRAR o dropdown */
+.dropdown.show {
+    display: block;
+}
+
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    white-space: nowrap; 
+}
+
+.dropdown ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* --- CSS do Modal de Suporte --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Escurecimento */
+    backdrop-filter: blur(5px); /* Desfoque */
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    color: black;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    text-align: left;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-content h3 {
+    color: #333; 
+    margin-top: 0;
+    font-size: 1.8em;
+    
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #700505;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.error-list {
+    padding-left: 20px;
+    /* Estilo para listas no modal */
+}
+.error-list li {
+    margin-bottom: 10px;
+}

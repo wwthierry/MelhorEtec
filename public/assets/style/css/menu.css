@@ -1,0 +1,190 @@
+/* assets/style/css/menu.css (Estilo Completo e Ajustado) */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+
+/* --- MAIN / GALERIA --- */
+
+main {
+  padding: 20px;
+  max-width: 100%; /* Permite que o conteúdo ocupe toda a largura */
+  margin: 20px auto;
+}
+
+#publis h2 {
+  text-align: center;
+  color: #700505;
+  margin-bottom: 25px;
+}
+
+.post-grid {
+    /* Layout Horizontal e Centralização */
+    display: flex;
+    flex-wrap: wrap; /* Permite que os posts quebrem para a linha de baixo */
+    gap: 25px;
+    justify-content: center; /* Centraliza a linha horizontal dos posts na tela */
+    min-width: 100%; 
+}
+
+/* ESTILO DO CARD (POST-ITEM) */
+.post-item {
+  background-color: rgb(243, 243, 243); 
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  overflow: hidden;
+  /* LARGURA AJUSTADA PARA 550PX */
+  width: 550px; 
+  height: auto; 
+}
+
+/* Cabeçalho do Post (Avatar e Nome) */
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 15px; 
+  gap: 10px;
+}
+
+.post-header p {
+    margin: 0; 
+    font-weight: 600;
+    color: #333;
+}
+
+/* Avatar de Perfil no Post */
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  background-color: #e91e63;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Imagem do Post */
+.post-item img {
+  width: 100%; 
+  height: 45vh;  
+  object-fit: cover; 
+  display: block;
+}
+
+/* Corpo do Post (Título e Legenda) */
+.post-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Estilo para a Estrela/Curtida */
+.like-area {
+    margin-top: 5px; 
+    margin-bottom: 5px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.like-container {
+    display: flex;
+    align-items: center;
+    color: #999;
+    user-select: none;
+}
+
+.like-button {
+    font-size: 1.2em;
+    color: #999; 
+    padding-right: 5px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+/* Estilo para quando o post está curtido */
+.like-button.liked {
+    color: #ffc107; /* Estrela dourada/amarela */
+}
+
+.like-count {
+    font-weight: bold;
+    color: #333;
+    padding-right: 15px; 
+}
+
+/* --- Estilo do Botão Excluir (Para ADM) --- */
+.delete-button {
+    background-color: #dc3545; /* Vermelho */
+    color: white;
+    border: none;
+    padding: 3px 8px;
+    margin-left: 10px; /* Espaçamento do contador */
+    border-radius: 4px;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    white-space: nowrap; 
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+.delete-button i {
+    margin-right: 5px;
+}
+/* --- Fim Estilo do Botão Excluir --- */
+
+
+/* Legenda/Descrição */
+.post-caption {
+    font-size: 1.1em;
+    color: #333; 
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* Container para a legenda e o botão "Ajudar" */
+.new-caption-container { 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; 
+    margin-top: 10px; 
+}
+
+/* Estilo para o Botão Ajudar */
+.help-button {
+    background-color: #8B0000;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+.help-button:hover {
+    background-color: #700505;
+}

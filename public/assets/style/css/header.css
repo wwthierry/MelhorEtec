@@ -1,0 +1,127 @@
+body{
+    margin: 1;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    margin-bottom: 0px;
+    padding: 1rem;
+}
+
+#right-side {
+    display: flex; /* Alinha o menu e o container de login um ao lado do outro */
+    align-items: center;
+    gap: 2rem; /* Adiciona espaço entre o menu e os botões de login */
+}
+
+#login {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#entrar {
+    background-color: #700505;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    width: 5rem;
+    text-align: center;
+}
+
+#criar {
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(0, 0, 0);
+    border: #700505 solid 2px;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    width: 7rem;
+    text-align: center;
+}
+#entrar:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    width: 5rem;
+    transition: 0.7s;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(0, 0, 0);
+    border: #700505 solid 2px;
+    border-radius: 2rem;
+}
+#criar:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    width: 7rem;
+    transition: 0.7s;
+    background-color:  #700505;
+    color: white;
+    border: #700505 solid 2px;
+    border-radius: 2rem;
+}
+
+#menu nav {
+    margin-left: 0.5rem;
+    display: flex;
+    gap: 2rem;
+}
+
+#menu li {
+    list-style: none;
+}
+
+#menu a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: "Open Sans", sans-serif;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+#menu a:hover, a:hover {
+    color: #700505;
+    transition: 0.2s;
+    opacity: 1;
+}
+
+.nav-link{
+        position: relative;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-family: "Open Sans", sans-serif;
+        opacity: 0.7;
+        transition: opacity 0.2s ease;
+
+
+}
+
+.nav-link.active {
+    opacity: 1 !important;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #700505;
+    animation: underline 0.3s ease;
+}
+
+img {
+    width: 8%;
+    height: 8%;
+}
+
+@keyframes underline {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}

@@ -1,0 +1,137 @@
+/* assets/style/css/public.css */
+
+/* Estilos gerais para o corpo do documento */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    /* Altera para coluna para empilhar formulário e mensagem */
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+ /* Padding geral para telas pequenas */
+}
+
+/* Container principal do formulário */
+/* O ID mudou para newPostForm e adicionei a classe para melhor controle */
+#newPostForm.publish-form-container {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    margin-top: 6rem;
+    margin-bottom: 20px; /* Espaço entre formulário e mensagem */
+}
+
+/* Estilo para o rótulo de upload */
+.upload {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    border: 2px #ccc; /* Adicionando borda para visualização */
+    border-radius: 8px;
+    padding: 2em;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.upload:hover {
+    border-color: #700505; /* Cor do hover para combinar com o botão */
+    background-color: #fcebeb;
+}
+
+/* Estilo do ícone de imagem */
+.upload img {
+    width: 64px;
+    height: 64px;
+    opacity: 0.7;
+    /* Ajustado para centralizar melhor */
+    margin: 0 auto 0.5rem auto; 
+}
+
+/* Estilo para o texto "Carregar fotos" */
+.upload h2 {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #555;
+    margin: 0;
+}
+
+/* Esconde o input de arquivo original */
+#imageFile {
+    display: none;
+}
+
+/* Container para os inputs e botão */
+.inputs-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* NOVO: Estilo para a caixa de legenda */
+#postCaption {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    min-height: 100px;
+    resize: vertical;
+    font-size: 1em;
+}
+
+/* Estilo do botão de publicar */
+button[type="submit"] {
+    background-color: #700505;
+    color: #fff;
+    border: none;
+    padding: 0.75em 1.5em;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #8c1010; /* Cor um pouco mais escura no hover */
+}
+
+/* Estilo para o ícone de avião de papel */
+button[type="submit"] .fas.fa-paper-plane {
+    font-size: 1.2em;
+}
+
+/* NOVO: Estilo para a área de mensagens/status */
+#postMessage.message-area {
+    width: 100%;
+    max-width: 500px;
+    padding: 1em;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 500;
+    text-align: center;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}

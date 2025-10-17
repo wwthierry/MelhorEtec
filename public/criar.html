@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/style/css/criar.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h2>BEM VINDO!</h2>
+            <p>Junte-se à nossa comunidade preenchendo o formulário ao lado.</p>
+            <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+        </div>
+        <div class="right-section">
+            <form id="signupForm">
+                <h2>CRIAR CONTA</h2>
+                <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
+                <div class="input-group">
+                    <input type="text" id="fName" placeholder="Primeiro Nome" required>
+                    <i class="fas fa-user input-icon"></i>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="lName" placeholder="Sobrenome" required>
+                    <i class="fas fa-user input-icon"></i>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="rEmail" placeholder="Email" required>
+                    <i class="fas fa-envelope input-icon"></i>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="rPassword" placeholder="Senha" required>
+                    <i class="fas fa-lock input-icon"></i>
+                </div>
+                <button type="submit" class="btn-submit">Criar Conta</button>
+                <div class="links">
+                    <p>Já tem uma conta?</p>
+                    <a href="login.html">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="assets/style/js/firebaseauth.js"></script>
+    <script src="assets/style/js/criar.js"></script>
+</body>
+</html>

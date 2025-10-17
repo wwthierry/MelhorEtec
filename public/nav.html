@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/style/css/nav.css">
+</head>
+
+<body>
+  <header>
+    <div id="menu">
+      <nav>
+        <ul>
+          <li><a href="menu.html" class="nav-link">Menu</a></li>
+          <li><a href="doacao2.html" class="nav-link">Doações</a></li>
+          <li><a href="suporte2.html" class="nav-link">Suporte</a></li>
+          <li><a href="sobre2.html" class="nav-link">Sobre</a></li>
+          
+          <li><a href="publi.html" class="nav-link post-link-btn"><i class="fas fa-plus"></i> Publicar</a></li> 
+          
+        </ul>
+        
+        <div class="user-profile-widget">
+            ${userAvatarHTML}
+            <span id="loggedUserFName">${userFirstName}</span>
+        </div>
+        
+        <div class="dropdown">
+          <div class="dropdown-profile-header">
+                  userPhotoURL 
+                  <img src="${userPhotoURL}" alt="Foto de Perfil" class="profile-avatar-dropdown">
+                  <div class="profile-avatar-dropdown initial-avatar">${userFirstName.charAt(0).toUpperCase()}</div>
+            
+              <p class="welcome-message">Olá, <strong>${userFirstName}</strong>!</p>
+              <span class="dropdown-email">${userEmail}</span> 
+              
+          </div>
+          
+          <div class="dropdown-actions-container">
+              <button id="configButton" class="dropdown-button config-button" onclick="window.location.href='conta.html'">
+                  <i class="fas fa-cog"></i> Configurações
+              </button>
+              <button id="signOutButton" class="dropdown-button signout-button">
+                  <i class="fas fa-arrow-right-to-bracket"></i> Sair
+              </button>
+          </div>
+          <button class="dropdown-close-btn" aria-label="Fechar Menu">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script type="module" src="assets/style/js/firebaseauth.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style/css/doacao2.css">
+    <link rel="stylesheet" href="assets/style/css/nav.css">
+    <link rel="stylesheet" href="assets/style/css/rodape.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+   
+    <main>
+        <div id="container">
+            <h2>Para prosseguir insira seus dados:</h2>
+ 
+            <div class="input-group">
+                <div class="input-container">
+                  <input required="" type="text" name="nome" autocomplete="off" class="input1">
+                  <label class="user-label">Nome</label>
+                </div>
+                <div class="input-container">
+                  <input required="" type="number" name="cpf" autocomplete="off" class="input2">
+                  <label class="cpf-label">CPF</label>
+                </div>
+              </div>
+             
+ 
+            <button>Continuar</button>
+        </div>
+    </main>
+    <script src="assets/style/js/rodape.js"></script>
+    <script type="module" src="assets/style/js/nav.js"></script>
+     <!-- VLibras Scripts -->
+     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+     <script>
+         new window.VLibras.Widget('https://vlibras.gov.br/app');
+     </script>
+</body>
+</html>

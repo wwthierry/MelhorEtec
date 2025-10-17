@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/style/css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h2>SEJA BEM VINDO!</h2>
+            <p>Para continuar com o login insira seus dados.</p>
+        </div>
+        <div class="right-section">
+    
+            <div class="tab-switcher">
+                <span id="userTab" class="tab active">LOGIN</span>
+                <span id="adminTab" class="tab">ADMINISTRADOR</span>
+                <div id="tabUnderline" class="tab-underline"></div>
+            </div>
+            <form id="signinForm">
+                <div id="signInMessage" class="messageDiv" style="display:none;"></div>
+                <div class="input-group">
+                    <input type="text" id="email" placeholder="Email" required> 
+                    <i class="fas fa-envelope input-icon"></i>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <i class="fas fa-lock input-icon"></i>
+                </div>
+                <div class="links">
+                    <a href="#" id="forgotPasswordLink">Recuperar Senha</a>
+                    <p>Não tem conta? <a href="criar.html">Criar Conta</a></p>
+                </div>
+                <button type="submit" class="btn-submit">Entrar</button>
+            </form>
+        </div>
+    <script type="module" src="assets/style/js/firebaseauth.js"></script>
+    <script type="module" src="assets/style/js/login1.js"></script> 
+</body>
+</html>

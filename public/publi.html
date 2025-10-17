@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Nova Foto</title>
+    <link rel="stylesheet" href="assets/style/css/rodape.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/style/css/nav.css">
+    <link rel="stylesheet" href="assets/style/css/rodape.css">
+    <link rel="stylesheet" href="assets/style/css/public.css"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+    <form id="newPostForm" class="publish-form-container">
+        
+        <label class="upload" for="imageFile">
+            <div class="form-group">
+                <img alt="Ícone de várias imagens empilhadas representando carregar fotos"
+                    src="https://cdn-icons-png.flaticon.com/512/25/25666.png" />
+                <h2>Carregar fotos</h2>
+                <input id="imageFile" type="file" required accept="image/*" />
+            </div>
+        </label>
+        
+        <div class="inputs-container">
+            
+            <textarea id="postCaption" 
+                      placeholder="Adicione uma legenda à sua publicação..." 
+                      maxlength="280"></textarea>
+
+            <button type="submit">
+                Publicar
+                <i class="fas fa-paper-plane"></i>
+            </button> 
+        </div>
+    </form>
+    
+    <div id="postMessage" class="message-area"></div>
+
+    <script src="assets/style/js/rodape.js"></script>
+    <script type="module" src="assets/style/js/nav.js"></script>
+    
+    <script src="assets/style/js/firebaseauth.js" type="module"></script>
+    <script src="assets/style/js/publish.js" type="module"></script> 
+    
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>
